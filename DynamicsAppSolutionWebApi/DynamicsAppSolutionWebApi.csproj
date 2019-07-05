@@ -132,6 +132,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\icons\historical_icon.svg" />
+    <Content Include="Content\images\icons\logout_icon.svg" />
+    <Content Include="Content\images\icons\notification_icon.svg" />
+    <Content Include="Content\images\icons\settings_icon.svg" />
+    <Content Include="Content\images\icons\worklist_icon.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

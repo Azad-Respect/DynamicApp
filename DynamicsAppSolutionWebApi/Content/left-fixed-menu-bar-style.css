@@ -1,0 +1,63 @@
+﻿@media only screen and (max-width: 768px) {
+    .left-menu-item-icon-div img {
+        width: 7em;
+    }
+
+    .left-menu-item-icon-div {
+        width: auto;
+    }
+}
+
+.left-menu-bar {
+    position: fixed;
+    height: 100%;
+    display: table;
+}
+
+.left-menu-item-container {
+    width: auto;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 0.625em;
+}
+
+.left-menu-item {
+    min-width: 3em;
+    opacity: 0.4;
+    box-shadow: 0 0 50px 5px black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+    .left-menu-item.notification {
+        background-color: #CC3366;
+    }
+
+    .left-menu-item.worklist {
+        background-color: orange;
+    }
+
+    .left-menu-item.historical {
+        background-color: #009933;
+    }
+
+    .left-menu-item.settings {
+        background-color: #6666FF;
+    }
+
+    .left-menu-item.logout {
+        background-color: red;
+    }
+
+.left-menu-item-icon-div {
+    position: absolute;
+    top: 50%;
+}
+
+    .left-menu-item-icon-div img {
+        text-align: center;
+        width: 2.9em;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
