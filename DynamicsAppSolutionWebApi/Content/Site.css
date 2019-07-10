@@ -9,8 +9,6 @@
     color: #FFCC00;
 }
 
-
-
 .footer {
     text-align: center;
     position: fixed;
@@ -20,3 +18,13 @@
     left: 50%;
     margin-left: -37.5%;
 }
+
+.site-link {
+    color: rgb(255, 204, 0);
+    text-decoration: none;
+}
+
+    .site-link:hover {
+        color: rgb(255, 204, 0);
+        text-decoration: none;
+    }

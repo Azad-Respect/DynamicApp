@@ -1,0 +1,66 @@
+﻿@media only screen and (max-width: 768px) {
+    .right-menu-item-icon-div img {
+        width: 7em;
+    }
+
+    .right-menu-item-icon-div {
+        width: auto;
+    }
+}
+
+.right-menu-bar {
+    position: fixed;
+    height: 100%;
+    display: table;
+    right: 0px;
+    min-width: 750px;
+}
+
+.right-menu-item-container {
+    width: auto;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 0.625em;
+    opacity: 0.55;
+}
+
+.right-menu-item {
+    min-width: 3em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+    .right-menu-item.notification {
+        /*background-image: linear-gradient(to right, #CC3366, #42004A );*/
+        background-image: linear-gradient(90deg, #36003C 0%, #CC3366 35%, #CC3366 22%);
+    }
+
+    .right-menu-item.worklist {
+        background-image: linear-gradient(to right, orange, #42004A);
+        background-image: linear-gradient(90deg, #36003C 0%, orange 35%, orange 22%);
+    }
+
+    .right-menu-item.historical {
+        background-image: linear-gradient(90deg, #36003C 0%, #009933 35%, #009933 22%);
+    }
+
+    .right-menu-item.settings {
+        background-image: linear-gradient(90deg, #36003C 0%, #6666FF 35%, #6666FF 22%);
+    }
+
+    .right-menu-item.logout {
+        background-image: linear-gradient(90deg, #36003C 0%, red 35%, red 22%);
+    }
+
+.right-menu-item-icon-div {
+    position: absolute;
+    top: 50%;
+}
+
+    .right-menu-item-icon-div img {
+        text-align: center;
+        width: 2.9em;
+        padding-right: 10%;
+        padding-right: 10%;
+    }

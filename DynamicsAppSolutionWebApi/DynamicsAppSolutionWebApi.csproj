@@ -137,6 +137,8 @@
     <Content Include="Content\images\icons\notification_icon.svg" />
     <Content Include="Content\images\icons\settings_icon.svg" />
     <Content Include="Content\images\icons\worklist_icon.svg" />
+    <Content Include="Content\left-fixed-menu-bar-style.css" />
+    <Content Include="Content\right-fixed-menu-bar-style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

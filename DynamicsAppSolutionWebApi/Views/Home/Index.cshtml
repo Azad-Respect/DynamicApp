@@ -2,94 +2,129 @@
     ViewBag.Title = "Home Page";
 }
 <script src="~/Scripts/jquery-3.3.1.js"></script>
+<link href="~/Content/left-fixed-menu-bar-style.css" rel="stylesheet" />
+<link href="~/Content/right-fixed-menu-bar-style.css" rel="stylesheet" />
 <script type="text/javascript">
     $(function () {
+
         var screenHeight = $(window).height();
-        $(".left_menu_item").css("height", (screenHeight / 5) - 5);
-        $(".left_menu_item_icon_div").css("transform", "translateY(-50%)");
+        $(".left-menu-item").css("height", (screenHeight / 5) - 5);
+        $(".left-menu-item-icon-div").css("transform", "translateY(-50%)");
 
 
         $(window).resize(function () {
             var screenHeight = $(window).height();
-            $(".left_menu_item").css("height", (screenHeight / 5) - 5);
-            $(".left_menu_item_icon_div").css("transform", "translateY(-50%)");
+            $(".left-menu-item").css("height", (screenHeight / 5) - 5);
+            $(".left-menu-item-icon-div").css("transform", "translateY(-50%)");
+        });
+
+        $(".right-menu-item").css("height", (screenHeight / 5) - 5);
+        $(".right-menu-item-icon-div").css("transform", "translateY(-50%)");
+
+        $(window).resize(function () {
+            var screenHeight = $(window).height();
+            $(".right-menu-item").css("height", (screenHeight / 5) - 5);
+            $(".right-menu-item-icon-div").css("transform", "translateY(-50%)");
         });
     })
 </script>
 
-@*<div class="row" style="height:auto">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>
-    </div>*@
 
-<div class="left_menu_bar">
-    <div class="left_menu_item_container" title="Notification">
-        <div class="left_menu_item notification">
+
+<div class="left-menu-bar">
+    <div class="left-menu-item-container" title="Notification">
+        <div class="left-menu-item notification">
         </div>
-        @*<div class="left_menu_item_icon_div">
-            <img src="~/Content/images/icons/notification_icon.svg" />
-        </div>*@
+        @*<div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/notification_icon.svg" />
+            </div>*@
     </div>
 
-    <div class="left_menu_item_container" title="Worklist">
-        <div class="left_menu_item worklist">
+    <div class="left-menu-item-container" title="Worklist">
+        <div class="left-menu-item worklist">
         </div>
-        @*<div class="left_menu_item_icon_div">
-            <img src="~/Content/images/icons/worklist_icon.svg" />
-        </div>*@
+        @*<div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/worklist_icon.svg" />
+            </div>*@
     </div>
 
-    <div class="left_menu_item_container" title="Historical">
-        <div class="left_menu_item historical">
+    <div class="left-menu-item-container" title="Historical">
+        <div class="left-menu-item historical">
         </div>
-        @*<div class="left_menu_item_icon_div">
-            <img src="~/Content/images/icons/historical_icon.svg" />
-        </div>*@
+        @*<div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/historical_icon.svg" />
+            </div>*@
     </div>
 
-    <div class="left_menu_item_container" title="Settings">
-        <div class="left_menu_item settings">
+    <div class="left-menu-item-container" title="Settings">
+        <div class="left-menu-item settings">
         </div>
-        @*<div class="left_menu_item_icon_div">
-            <img src="~/Content/images/icons/settings_icon.svg" />
-        </div>*@
+        @*<div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/settings_icon.svg" />
+            </div>*@
     </div>
 
-    <div class="left_menu_item_container" title="Logout"> 
-        <div class="left_menu_item logout">
+    <div class="left-menu-item-container" title="Logout">
+        <div class="left-menu-item logout">
         </div>
-        @*<div class="left_menu_item_icon_div">
-            <img src="~/Content/images/icons/logout_icon.svg" />
-        </div>*@
+        @*<div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/logout_icon.svg" />
+            </div>*@
     </div>
 </div>
 
 
 
-@*<div class="col-md-2" style="background-color:red;text-align:center;height:10em;">
+
+<div class="right-menu-bar">
+    <div style="position:absolute;z-index:1;top:0;">
+            <svg style="position:absolute;z-index:1;top:0;" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1500px" height="3500px" fill="#42004A">
+                <clipPath id="svgClip">
+                    <path id="svgPath" d="M433,407 L444,407 300,50 288,49 z" />
+                </clipPath>
+                <path id="svgMask" d="M1833,10500 L1844,10500 250,0 262,0 z" />
+            </svg>
+        </div>
+        <div style="position:absolute;z-index:1;top:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="14500px" height="14500px" fill="#42004A">
+                <clipPath id="svgClip">
+                    <path id="svgPath" d="M-2,421 L225,420 62,-3 0,-2 z" />
+                </clipPath>
+                @*<path id="svgMask" d="M-35000,14500 L2180,14500 70,-3 60,-2 z" />*@
+                <path id="svgMask" d="M2150,14500 L2180,14500 70,-3 60,-2 z" />
+            </svg>
+        </div>
+    <div class="right-menu-item-container" title="Notifications" style="font-family:'Segoe UI Light'">
+        <div class="right-menu-item notification" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:4em">
+            NOTIFICATION
+        </div>
+        <div>
+            
 
     </div>
-    <div class="col-md-2" style="background-color:orange;text-align:center;height:10em;">
+
+    <div class="right-menu-item-container" title="Worklist" style="font-family:'Segoe UI Light'">
+        <div class="right-menu-item worklist" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:3.5em">
+            WORKLIST
+        </div>
 
     </div>
-    <div class="col-md-2" style="background-color:blue;text-align:center;height:10em;">
 
-    </div>*@
+    <div class="right-menu-item-container" title="Historical" style="font-family:'Segoe UI Light'">
+        <div class="right-menu-item historical" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:5em">
+            HISTORICAL
+        </div>
+    </div>
 
+    <div class="right-menu-item-container" title="Settings" style="font-family:'Segoe UI Light'">
+        <div class="right-menu-item settings" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:5.4em">
+            SETTINGS
+        </div>
+    </div>
+
+    <div class="right-menu-item-container" title="Logout" style="font-family:'Segoe UI Light'">
+        <div class="right-menu-item logout" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:5.8em">
+            LOGOUT
+        </div>
+    </div>
+</div>
