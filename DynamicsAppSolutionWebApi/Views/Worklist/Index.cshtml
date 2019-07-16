@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "Worklist";
+}
+<head>
+
+
+
+</head>
+
+
+<style>
+    .user-info-container {
+    }
+
+    .user-info-name-position-container {
+        float: left;
+        margin-top: 1.8em
+    }
+
+    .user-info-name {
+        font-size: 1.0em
+    }
+
+    .user-info-position {
+        font-size: 1.0em;
+        color: #14791E;
+        float: right
+    }
+
+    .user-image-container {
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        background-color: #FFCB00;
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #FFCB00;
+        left: 1em
+    }
+
+    .grid-container {
+        padding-left: 6.5em;
+        padding-top: 2em;
+        padding-right: 2em;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        display: table;
+    }
+
+    .tile-container {
+        display: block;
+        float: left;
+        width: 90%
+    }
+
+    .tile {
+        width: 21em;
+        height: 10em;
+        display: inline-block;
+        box-sizing: border-box;
+        margin-top: 1em;
+        margin-left: 1em;
+        box-shadow: 0px 0px 10px 0px black;
+        position: relative;
+        cursor: pointer
+    }
+
+    .tile-back-div {
+        background-color: orange;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.4
+    }
+
+    .tile-title {
+        width: 100%;
+        text-align: center;
+        font-family: Segoe UI Light;
+        font-size: 1.7em;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 34%;
+        transform: translateX(-50%);
+    }
+
+    .tile-count {
+        font-family: Segoe UI Light;
+        font-size: 1.2em;
+        position: absolute;
+        z-index: 1;
+        bottom: 1em;
+        right: 2em
+    }
+
+    .tile-grid-right-arrow {
+        float: right;
+        width: 10%;
+        text-align: right;
+        height: 100%;
+        line-height: 212px
+    }
+</style>
+
+<div style="padding-left:7em;padding-top:2em;padding-right:3em;display:inline-block;width:100%;height:100%;box-sizing:border-box">
+    <div style="width:100%;height:100%">
+        <div style="float:left">
+            <img src="~/Content/images/logo/app_logo.svg" title="Rapido Logo" />
+        </div>
+        <div style="float:right">
+            <div class="user-info-container">
+                <div class="user-info-name-position-container">
+                    <div class="user-info-name">Zinedine Zidane</div>
+                    <div class="user-info-position">Coach</div>
+                </div>
+                <div class="user-image-container">
+                    <div>
+                        <img src="~/Content/images/user_image.jpg" width="100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="breadcrumb-container" style="padding-left:7.2em;padding-top:2em;padding-right:2em;display:inline-block;width:100%;height:100%;box-sizing:border-box">
+    <div style="float:left;font-family:'Segoe UI Light';color:#BA377D;font-size:1.7em ">
+        WORKLIST
+    </div>
+    <div style="float:right;">
+        <select style="background-color: #4B014E;width:16em;height:3em;color:rgb(255, 204, 0);border:rgb(255, 204, 0) solid 1px;box-shadow:0px 0px 6px 0px black;padding-left:0.4em">
+            <option>Drogba</option>
+            <option>Zidane</option>
+        </select>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="tile-container">
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+        <div class="tile">
+            <div class="tile-back-div">
+            </div>
+            <div class="tile-title">PAYMENT REQUEST</div>
+            <div class="tile-count">25</div>
+        </div>
+    </div>
+   
+    <div class="tile-grid-right-arrow">
+        <img src="~/Content/images/right_arrow.png" width="60" />
+    </div>
+</div>
+
+
+
+

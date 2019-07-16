@@ -3,19 +3,61 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Approval App - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css/layout")
+    @Scripts.Render("~/bundles/js/layout")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <div class="left-menu-bar">
+        <div class="left-menu-item-container" title="Notification">
+            <div class="left-menu-item notification">
+            </div>
+            <div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/notification_icon.svg" />
+            </div>
+        </div>
+
+        <div class="left-menu-item-container" title="Worklist">
+            <div class="left-menu-item worklist">
+            </div>
+            <div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/worklist_icon.svg" />
+            </div>
+        </div>
+
+        <div class="left-menu-item-container" title="Historical">
+            <div class="left-menu-item historical">
+            </div>
+            <div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/historical_icon.svg" />
+            </div>
+        </div>
+
+        <div class="left-menu-item-container" title="Settings">
+            <div class="left-menu-item settings">
+            </div>
+            <div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/settings_icon.svg" />
+            </div>
+        </div>
+
+        <div class="left-menu-item-container" title="Logout">
+            <div class="left-menu-item logout">
+            </div>
+            <div class="left-menu-item-icon-div">
+                <img src="~/Content/images/icons/logout_icon.svg" />
+            </div>
+        </div>
+    </div>
 
     @RenderBody()
     <footer class="footer">
-        <p><a class="site-link" href="http://respectsolution.com/">&copy; @DateTime.Now.Year - Respect Solution</a></p>
+        <p><a class="site-link" href="http://respectsolution.com/">&copy; @DateTime.Now.Year - Respect Solutions. All Rights Reserved</a></p>
     </footer>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

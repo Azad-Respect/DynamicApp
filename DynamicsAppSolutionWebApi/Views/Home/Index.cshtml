@@ -1,130 +1,112 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<script src="~/Scripts/jquery-3.3.1.js"></script>
-<link href="~/Content/left-fixed-menu-bar-style.css" rel="stylesheet" />
-<link href="~/Content/right-fixed-menu-bar-style.css" rel="stylesheet" />
-<script type="text/javascript">
-    $(function () {
+@Styles.Render("~/Content/css/home")
+@Scripts.Render("~/bundles/js/home")
 
-        var screenHeight = $(window).height();
-        $(".left-menu-item").css("height", (screenHeight / 5) - 5);
-        $(".left-menu-item-icon-div").css("transform", "translateY(-50%)");
+<div class="app-logo-container">
+    <div><img src="~/Content/IMAGES/logo/app_logo.svg" title="Rapido Logo" width="500" /></div>
+</div>
 
-
-        $(window).resize(function () {
-            var screenHeight = $(window).height();
-            $(".left-menu-item").css("height", (screenHeight / 5) - 5);
-            $(".left-menu-item-icon-div").css("transform", "translateY(-50%)");
-        });
-
-        $(".right-menu-item").css("height", (screenHeight / 5) - 5);
-        $(".right-menu-item-icon-div").css("transform", "translateY(-50%)");
-
-        $(window).resize(function () {
-            var screenHeight = $(window).height();
-            $(".right-menu-item").css("height", (screenHeight / 5) - 5);
-            $(".right-menu-item-icon-div").css("transform", "translateY(-50%)");
-        });
-    })
-</script>
-
-
-
-<div class="left-menu-bar">
-    <div class="left-menu-item-container" title="Notification">
-        <div class="left-menu-item notification">
-        </div>
-        @*<div class="left-menu-item-icon-div">
-                <img src="~/Content/images/icons/notification_icon.svg" />
-            </div>*@
+<div class="user-info-container">
+    <div class="user-info-name-position-container">
+        <div class="user-info-name">Zinedine Zidane</div>
+        <div class="user-info-position">Coach</div>
     </div>
-
-    <div class="left-menu-item-container" title="Worklist">
-        <div class="left-menu-item worklist">
+    <div class="user-image-container">
+        <div>
+            <img src="~/Content/images/user_image.jpg" width="135" />
         </div>
-        @*<div class="left-menu-item-icon-div">
-                <img src="~/Content/images/icons/worklist_icon.svg" />
-            </div>*@
-    </div>
-
-    <div class="left-menu-item-container" title="Historical">
-        <div class="left-menu-item historical">
-        </div>
-        @*<div class="left-menu-item-icon-div">
-                <img src="~/Content/images/icons/historical_icon.svg" />
-            </div>*@
-    </div>
-
-    <div class="left-menu-item-container" title="Settings">
-        <div class="left-menu-item settings">
-        </div>
-        @*<div class="left-menu-item-icon-div">
-                <img src="~/Content/images/icons/settings_icon.svg" />
-            </div>*@
-    </div>
-
-    <div class="left-menu-item-container" title="Logout">
-        <div class="left-menu-item logout">
-        </div>
-        @*<div class="left-menu-item-icon-div">
-                <img src="~/Content/images/icons/logout_icon.svg" />
-            </div>*@
     </div>
 </div>
 
-
-
-
 <div class="right-menu-bar">
-    <div style="position:absolute;z-index:1;top:0;">
-            <svg style="position:absolute;z-index:1;top:0;" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1500px" height="3500px" fill="#42004A">
-                <clipPath id="svgClip">
-                    <path id="svgPath" d="M433,407 L444,407 300,50 288,49 z" />
-                </clipPath>
-                <path id="svgMask" d="M1833,10500 L1844,10500 250,0 262,0 z" />
-            </svg>
-        </div>
-        <div style="position:absolute;z-index:1;top:0;">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="14500px" height="14500px" fill="#42004A">
-                <clipPath id="svgClip">
-                    <path id="svgPath" d="M-2,421 L225,420 62,-3 0,-2 z" />
-                </clipPath>
-                @*<path id="svgMask" d="M-35000,14500 L2180,14500 70,-3 60,-2 z" />*@
-                <path id="svgMask" d="M2150,14500 L2180,14500 70,-3 60,-2 z" />
-            </svg>
-        </div>
-    <div class="right-menu-item-container" title="Notifications" style="font-family:'Segoe UI Light'">
-        <div class="right-menu-item notification" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:4em">
-            NOTIFICATION
-        </div>
-        <div>
-            
-
+    <div class="svg-line-container">
+        <svg class="line" fill="#42004A">
+            <clipPath id="svgClip">
+                <path id="svgPath" d="M433,407 L444,407 300,50 288,49 z" />
+            </clipPath>
+            <path id="svgMask" d="M1833,10500 L1844,10500 250,0 262,0 z" />
+        </svg>
+    </div>
+    <div class="svg-line-container">
+        <svg class="line" fill="#42004A">
+            <clipPath id="svgClip">
+                <path id="svgPath" d="M-2,421 L225,420 62,-3 0,-2 z" />
+            </clipPath>
+            <path id="svgMask" d="M2150,14500 L2180,14500 70,-3 60,-2 z" />
+        </svg>
     </div>
 
-    <div class="right-menu-item-container" title="Worklist" style="font-family:'Segoe UI Light'">
-        <div class="right-menu-item worklist" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:3.5em">
-            WORKLIST
-        </div>
-
-    </div>
-
-    <div class="right-menu-item-container" title="Historical" style="font-family:'Segoe UI Light'">
-        <div class="right-menu-item historical" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:5em">
-            HISTORICAL
+    <div class="right-menu-item-container" title="Notifications">
+        <div class="right-menu-item notification">
+            <span id="right-menu-notification-icon-span">
+                <img src="~/Content/images/icons/notification_icon.svg" />
+            </span>
+            <span id="right-menu-notification-name-span">NOTIFICATION</span>
         </div>
     </div>
+    <div class="right-menu-item-container" title="Worklist">
+        <div class="right-menu-item worklist">
+            <span id="right-menu-worklist-icon-span">
+                <img src="~/Content/images/icons/worklist_icon.svg" />
+            </span>
+            <span id="right-menu-worklist-name-span">WORKLIST</span>
+        </div>
+    </div>
+    <div class="right-menu-item-container" title="Historical">
+        <div class="right-menu-item historical">
+            <span id="right-menu-historical-icon-span">
+                <img src="~/Content/images/icons/historical_icon.svg" />
+            </span>
+            <span id="right-menu-historical-name-span">HISTORICAL</span>
+        </div>
+    </div>
+    <div class="right-menu-item-container" title="Settings">
+        <div class="right-menu-item settings">
+            <span id="right-menu-settings-icon-span">
+                <img src="~/Content/images/icons/settings_icon.svg" />
+            </span>
+            <span id="right-menu-settings-name-span">SETTINGS</span>
+        </div>
+    </div>
+    <div class="right-menu-item-container" title="Logout">
+        <div class="right-menu-item logout">
+            <span id="right-menu-settings-icon-span">
+                <img src="~/Content/images/icons/logout_icon.svg" />
+            </span>
+            <span id="right-menu-settings-name-span">LOGOUT</span>
+        </div>
+    </div>
+</div>
 
-    <div class="right-menu-item-container" title="Settings" style="font-family:'Segoe UI Light'">
-        <div class="right-menu-item settings" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:5.4em">
-            SETTINGS
+<div class="right-menu-bar link-div">
+    <div class="right-menu-item-container notification-link" title="Notifications">
+        <div class="right-menu-item notification">
+
         </div>
     </div>
 
-    <div class="right-menu-item-container" title="Logout" style="font-family:'Segoe UI Light'">
-        <div class="right-menu-item logout" style="font-size:3.5em; color:white;box-sizing:border-box;  display: table-cell;min-width: 750px;vertical-align: middle;text-align: center;padding-left:5.8em">
-            LOGOUT
+    <div class="right-menu-item-container worklist-link" title="Worklist">
+        <div class="right-menu-item worklist">
+
+        </div>
+    </div>
+
+    <div class="right-menu-item-container historical-link" title="Historical">
+        <div class="right-menu-item historical">
+
+        </div>
+    </div>
+
+    <div class="right-menu-item-container settings-link" title="Settings">
+        <div class="right-menu-item settings">
+
+        </div>
+    </div>
+
+    <div class="right-menu-item-container logout-link" title="Logout">
+        <div class="right-menu-item logout">
         </div>
     </div>
 </div>

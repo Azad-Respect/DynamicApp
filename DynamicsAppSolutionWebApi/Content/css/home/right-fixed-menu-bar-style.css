@@ -1,0 +1,192 @@
+﻿@media only screen and (max-width: 1367px) {
+    /*.right-menu-item-icon-div img {
+        width: 7em;
+    }
+
+    .right-menu-item-icon-div {
+        width: auto;
+    }*/
+    .right-menu-item.notification {
+        padding-left: 2.4em !important;
+    }
+
+    .right-menu-item.worklist {
+        padding-left: 2.9em !important;
+    }
+
+    .right-menu-item.historical {
+        padding-left: 3.4em !important;
+    }
+
+    .right-menu-item.settings {
+        padding-left: 3.9em !important;
+    }
+
+    .right-menu-item.logout {
+        padding-left: 4.2em !important;
+    }
+}
+
+.right-menu-bar {
+    position: fixed;
+    height: 100%;
+    display: table;
+    right: 0px;
+    min-width: 750px;
+}
+
+    .right-menu-bar.link-div {
+        opacity: 0
+    }
+
+.right-menu-item-container {
+    width: auto;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 0.625em;
+    font-family: 'Segoe UI Light';
+}
+
+.right-menu-item {
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+    .right-menu-item.notification {
+        background-image: linear-gradient(90deg, #36003C 0%, #CC3366 35%, #CC3366 22%);
+        padding-left: 2.5em;
+        font-size: 3.5em;
+        color: white;
+        box-sizing: border-box;
+        display: block;
+        width: 100% !important;
+        vertical-align: middle;
+        text-align: center;
+        opacity: 0.59;
+    }
+
+#right-menu-notification-icon-span {
+    float: left;
+}
+
+#right-menu-notification-name-span {
+    float: left;
+    padding-left: 2.1em;
+}
+
+.right-menu-item.worklist {
+    background-image: linear-gradient(90deg, #36003C 0%, orange 35%, orange 22%);
+    padding-left: 3.1em;
+    font-size: 3.5em;
+    color: white;
+    box-sizing: border-box;
+    display: block;
+    width: 100% !important;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.59;
+}
+
+#right-menu-worklist-icon-span {
+    float: left;
+}
+
+#right-menu-worklist-name-span {
+    float: left;
+    padding-left: 2.2em;
+}
+
+.right-menu-item.historical {
+    background-image: linear-gradient(90deg, #36003C 0%, #009933 35%, #009933 22%);
+    padding-left: 3.7em;
+    font-size: 3.5em;
+    color: white;
+    box-sizing: border-box;
+    display: block;
+    width: 100% !important;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.59;
+}
+
+#right-menu-historical-icon-span {
+    float: left;
+}
+
+#right-menu-historical-name-span {
+    float: left;
+    padding-left: 2.2em;
+}
+
+.right-menu-item.settings {
+    background-image: linear-gradient(90deg, #36003C 0%, #6666FF 35%, #6666FF 22%);
+    padding-left: 4.3em;
+    font-size: 3.4em;
+    color: white;
+    box-sizing: border-box;
+    display: block;
+    width: 100% !important;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.59;
+}
+
+#right-menu-settings-icon-span {
+    float: left;
+}
+
+#right-menu-settings-name-span {
+    float: left;
+    padding-left: 2.2em;
+}
+
+.right-menu-item.logout {
+    background-image: linear-gradient(90deg, #36003C 0%, red 35%, red 22%);
+    padding-left: 4.8em;
+    font-size: 3.5em;
+    color: white;
+    box-sizing: border-box;
+    display: block;
+    width: 100% !important;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.59;
+}
+
+#right-menu-logout-icon-span {
+    float: left;
+}
+
+#right-menu-logout-name-span {
+    float: left;
+    padding-left: 2.0em;
+}
+
+
+.right-menu-item-icon-div {
+    position: absolute;
+    top: 50%;
+}
+
+    .right-menu-item-icon-div img {
+        text-align: center;
+        width: 2.9em;
+        padding-right: 10%;
+        padding-right: 10%;
+    }
+
+.svg-line-container {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+    .svg-line-container .line {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 2500px;
+        height: 4500px;
+    }

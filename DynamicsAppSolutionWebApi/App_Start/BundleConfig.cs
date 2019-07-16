@@ -8,23 +8,36 @@ namespace DynamicsAppSolutionWebApi
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            #region Layout
+            bundles.Add(new StyleBundle("~/Content/css/layout").Include(
+                    "~/Content/css/layout/layout-style.css",
+                    "~/Content/css/layout/left-fixed-menu-bar-style.css"
+                    ));
+            bundles.Add(new ScriptBundle("~/bundles/js/layout").Include(
+                  "~/Scripts/jquery-{version}.js",
+                  "~/Content/js/layout/left-menu.js"
+                  ));
+            #endregion
+
+            #region Home
+            bundles.Add(new StyleBundle("~/Content/css/home").Include(
+                 "~/Content/css/home/right-fixed-menu-bar-style.css",
+                 "~/Content/css/home/home-page-style.css"
+                 ));
+            bundles.Add(new ScriptBundle("~/bundles/js/home").Include(
+                   "~/Scripts/jquery-{version}.js",
+                   "~/Content/js/home/home-page.js"
+                   ));
+            #endregion
         }
     }
 }
