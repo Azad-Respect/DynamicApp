@@ -1,0 +1,77 @@
+﻿.grid-container {
+    padding-left: 6.5em;
+    padding-top: 2em;
+    padding-right: 2em;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.tile-container {
+    display: block;
+    float: left;
+    width: 90%
+}
+
+.tile {
+    min-width: 15em;
+    height: 10em;
+    display: inline-table;
+    box-sizing: border-box;
+    margin-top: 1em;
+    margin-left: 1em;
+    box-shadow: 0px 0px 10px 0px black;
+    position: relative;
+    cursor: pointer;
+}
+
+.tile-back-div {
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4
+}
+
+.tile-title {
+    width: 100%;
+    text-align: center;
+    font-family: Segoe UI Light;
+    font-size: 1.4em;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tile-count {
+    font-family: Segoe UI Light;
+    font-size: 1.2em;
+    position: absolute;
+    z-index: 1;
+    bottom: 0.6em;
+    right: 1em
+}
+
+.tile-grid-right-arrow {
+    float: right;
+    width: 10%;
+    text-align: right;
+    height: 100%;
+    line-height: 212px
+}
+
+.group-by-div {
+    float: right;
+}
+
+    .group-by-div select {
+        background-color: #4B014E;
+        width: 16em;
+        height: 3em;
+        color: rgb(255, 204, 0);
+        border: rgb(255, 204, 0) solid 1px;
+        box-shadow: 0px 0px 6px 0px black;
+        padding-left: 0.4em
+    }

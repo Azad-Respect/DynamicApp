@@ -1,51 +1,59 @@
-﻿using System.Web;
+﻿using DynamicsAppSolutionWebApi.Enums;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Web;
 using System.Web.Optimization;
 
 namespace DynamicsAppSolutionWebApi
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            AddToBundles(bundles, ContentStatus.css);
+            AddToBundles(bundles, ContentStatus.js);
+        }
 
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+        private static void AddToBundles(BundleCollection bundles, ContentStatus contentStatus)
+        {
+            // Get Domain Path
+            var currentDirectory = HttpRuntime.AppDomainAppPath + "\\Content";
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+            // Get content folder. Depends on content status
+            var directories = Directory.GetDirectories(currentDirectory).Where(x => x.Contains(contentStatus.ToString()));
 
-            #region Layout
-            bundles.Add(new StyleBundle("~/Content/css/layout").Include(
-                    "~/Content/css/layout/layout-style.css",
-                    "~/Content/css/layout/left-fixed-menu-bar-style.css"
-                    ));
-            bundles.Add(new ScriptBundle("~/bundles/js/layout").Include(
-                  "~/Scripts/jquery-{version}.js",
-                  "~/Content/js/layout/left-menu.js",
-                  "~/Content/js/layout/layout.js"
-                  ));
-            #endregion
+            foreach (var folder in directories)
+            {
+                var subFolders = Directory.GetDirectories(folder);
 
-            #region Home
-            bundles.Add(new StyleBundle("~/Content/css/home").Include(
-                 "~/Content/css/home/right-fixed-menu-bar-style.css",
-                 "~/Content/css/home/home-page-style.css"
-                 ));
-            bundles.Add(new ScriptBundle("~/bundles/js/home").Include(
-                   "~/Scripts/jquery-{version}.js",
-                   "~/Content/js/home/home-page.js"
-                   ));
-            #endregion
+                // Get content sub folders
+                foreach (var subFolder in subFolders)
+                {
+                    string subFolderName = subFolder.Split('\\').Last();
 
-            #region worklist
-            bundles.Add(new ScriptBundle("~/bundles/js/worklist").Include(
-                   "~/Scripts/jquery-{version}.js",
-                  "~/Content/js/worklist/worklist.js"
-                  ));
-            #endregion
+                    // Create bundle
+                    Bundle bundle = null;
+                    if (contentStatus.ToString() == "css")
+                    {
+                        bundle = new Bundle("~/Content/" + contentStatus.ToString() + "/" + subFolderName + "");
+                    }
+                    else if (contentStatus.ToString() == "js")
+                    {
+                        bundle = new Bundle("~/bundles/" + contentStatus.ToString() + "/" + subFolderName + "");
+                    }
+
+                    // Get sub folder files and include to bundle
+                    foreach (var files in Directory.GetFiles(subFolder))
+                    {
+                        string fileName = files.Split('\\').Last();
+                        bundle.Include("~/Content/" + contentStatus.ToString() + "/" + subFolderName + "/" + fileName + "");
+                    }
+
+                    // Add to bundles
+                    bundles.Add(bundle);
+                }
+            }
         }
     }
 }

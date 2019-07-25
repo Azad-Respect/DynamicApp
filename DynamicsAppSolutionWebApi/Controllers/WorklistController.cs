@@ -86,9 +86,7 @@ namespace DynamicsAppSolutionWebApi.Controllers
                         }
                     }
                 }
-               // return list;
                 return Json(list, JsonRequestBehavior.AllowGet);
-
             }
         }
 

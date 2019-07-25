@@ -102,3 +102,29 @@ body {
     color: #BA377D;
     font-size: 1.7em
 }
+
+.loading-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+    opacity: 0;
+}
+
+    .loading-container div {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.6;
+        position: fixed;
+        text-align: center;
+    }
+
+    .loading-container img {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -35px;
+        margin-top: -35px;
+    }

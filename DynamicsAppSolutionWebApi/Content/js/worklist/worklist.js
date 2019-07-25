@@ -5,6 +5,7 @@
 
 // Invoke GetWorkTypes webmethod
 function getWorkTypes() {
+    showLoading();
     $.ajax({
         type: "POST",
         url: "Worklist/GetWorkTypes",
@@ -20,18 +21,8 @@ function getWorkTypes() {
         dataType: "",
         success: function (list) {
             createWorkTypeGrid(list);
-
-            $(".tile").hover(
-                function () {
-                    $(this).find(".tile-back-div").stop(true, false).animate({ "opacity": "0.8" });
-                    $(this).find(".tile-title").stop(true, false).css({ "color": "#3c0140" });
-                    $(this).find(".tile-count").stop(true, false).css({ "color": "#3c0140" });
-                }
-                , function () {
-                    $(this).find(".tile-back-div").stop(true, false).animate({ "opacity": "0.4" });
-                    $(this).find(".tile-title").stop(true, false).css({ "color": "rgb(255, 204, 0)" });
-                    $(this).find(".tile-count").stop(true, false).css({ "color": "rgb(255, 204, 0)" });
-                });
+            hideLoading();
+            workTypeTileHover();
         },
         error: function () {
             alert("GetWorkTypes method error");
@@ -51,4 +42,18 @@ function createWorkTypeGrid(list) {
     }
 }
 
+// Work Type grid tile hover
+function workTypeTileHover() {
+    $(".tile").hover(
+        function () {
+            $(this).find(".tile-back-div").stop(true, false).animate({ "opacity": "0.8" });
+            $(this).find(".tile-title").stop(true, false).css({ "color": "#3c0140" });
+            $(this).find(".tile-count").stop(true, false).css({ "color": "#3c0140" });
+        }
+        , function () {
+            $(this).find(".tile-back-div").stop(true, false).animate({ "opacity": "0.4" });
+            $(this).find(".tile-title").stop(true, false).css({ "color": "rgb(255, 204, 0)" });
+            $(this).find(".tile-count").stop(true, false).css({ "color": "rgb(255, 204, 0)" });
+        });
+}
 

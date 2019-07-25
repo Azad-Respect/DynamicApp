@@ -137,6 +137,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorklistController.cs" />
+    <Compile Include="Enums\ContentStatus.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,12 +179,15 @@
     <Content Include="Content\css\3dHoverEffect\style_common.css" />
     <Content Include="Content\css\3dHoverEffect\test.css" />
     <Content Include="Content\css\home\home-page-style.css" />
+    <Content Include="Content\css\worklist\worklist-page-style.css" />
+    <Content Include="Content\images\app\loading.gif" />
     <Content Include="Content\images\logo\app_logo.svg" />
     <Content Include="Content\images\right_arrow.png" />
     <Content Include="Content\images\user_image.jpg" />
     <Content Include="Content\js\3dHoverEffect\jquery.hoverfold.js" />
     <Content Include="Content\js\3dHoverEffect\modernizr.custom.69142.js" />
     <Content Include="Content\js\home\home-page.js" />
+    <Content Include="Content\js\layout\jquery-3.3.1.js" />
     <Content Include="Content\js\layout\layout.js" />
     <Content Include="Content\js\layout\left-menu.js" />
     <Content Include="Content\css\layout\bootstrap-theme.css" />
