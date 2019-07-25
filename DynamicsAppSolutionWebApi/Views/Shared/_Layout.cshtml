@@ -11,8 +11,27 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <div class="user-container">
+        <a href="~/Home/Index">
+            <div class="user-logo">
+                <img src="~/Content/images/logo/app_logo.svg" title="Rapido Logo" />
+            </div>
+        </a>
+        <div class="user-info-text-container">
+            <div class="user-info-name-position-container">
+                <div class="user-info-name">Zinedine Zidane</div>
+                <div class="user-info-position">Coach</div>
+            </div>
+            <div class="user-image-container">
+                <div>
+                    <img src="~/Content/images/user_image.jpg" width="100" />
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="left-menu-bar">
-        <div class="left-menu-item-container" title="Notification">
+        <div class="left-menu-item-container" title="Notification" style="box-shadow: inset 0 -5px 0 black;">
             <div class="left-menu-item notification">
             </div>
             <div class="left-menu-item-icon-div">
@@ -20,7 +39,7 @@
             </div>
         </div>
 
-        <div class="left-menu-item-container" title="Worklist">
+        <div class="left-menu-item-container" title="Worklist" style="box-shadow: inset 0 -5px 0 black;">
             <div class="left-menu-item worklist">
             </div>
             <div class="left-menu-item-icon-div">
@@ -28,7 +47,7 @@
             </div>
         </div>
 
-        <div class="left-menu-item-container" title="Historical">
+        <div class="left-menu-item-container" title="Historical" style="box-shadow: inset 0 -5px 0 black;">
             <div class="left-menu-item historical">
             </div>
             <div class="left-menu-item-icon-div">
@@ -36,7 +55,7 @@
             </div>
         </div>
 
-        <div class="left-menu-item-container" title="Settings">
+        <div class="left-menu-item-container" title="Settings" style="box-shadow: inset 0 -5px 0 black;">
             <div class="left-menu-item settings">
             </div>
             <div class="left-menu-item-icon-div">
@@ -55,7 +74,7 @@
 
     @RenderBody()
     <footer class="footer">
-        <p><a class="site-link" href="http://respectsolution.com/">&copy; @DateTime.Now.Year - Respect Solutions. All Rights Reserved</a></p>
+        <a class="site-link" style="" href="http://respectsolution.com/">&copy; @DateTime.Now.Year - Respect Solutions </a>
     </footer>
 
     @RenderSection("scripts", required: false)

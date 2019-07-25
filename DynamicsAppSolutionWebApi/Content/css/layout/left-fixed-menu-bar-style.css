@@ -16,10 +16,9 @@
 
 .left-menu-item-container {
     width: auto;
-    height: auto;
-    position: relative;
     cursor: pointer;
-    padding-bottom: 0.625em;
+    position: relative;
+    /*padding-bottom: 0.625em;*/
 }
 
 .left-menu-item {
@@ -27,7 +26,6 @@
     opacity: 0.2;
     box-shadow: 0 0 50px 5px black;
     text-align: center;
-    padding-bottom: 10px;
 }
 
     .left-menu-item.notification {
@@ -52,10 +50,8 @@
 
 .left-menu-item-icon-div {
     position: absolute;
-    top: 50%; /* this to center the box w.r.t to parent */
+    top: 40%;
     left: 20%; /* this to center the box w.r.t to parent */
-    /* Above 2 lines wont fully center it, the next line internally centers it, buy moving itself 50% left and top */
-    transform: translateX(-25%);
     margin: auto;
 }
 

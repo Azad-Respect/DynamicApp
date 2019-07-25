@@ -10,10 +10,6 @@
     }
 }
 
-
-
-
-
 body {
     background: url(../../images/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -27,13 +23,13 @@ body {
 }
 
 .footer {
+    opacity: 0.6;
+    z-index: 4;
+    text-transform: uppercase;
+    font-size: 1em;
+    width: 100%;
     text-align: center;
-    position: fixed;
-    bottom: 1em;
-    width: 75%;
-    position: fixed;
-    left: 50%;
-    margin-left: -37.5%;
+    padding-bottom: 1em;
 }
 
 .site-link {
@@ -46,11 +42,63 @@ body {
         text-decoration: none;
     }
 
-.footer {
-    opacity: 0.6;
-    position: absolute;
-    left: 15%;
-    bottom: 2%;
-    z-index: 100;
-    text-transform: uppercase;
+.user-container {
+    padding-left: 7em;
+    padding-right: 3em;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+.user-logo {
+    float: left;
+    padding-top: 2em;
+}
+
+.user-info-text-container {
+    float: right;
+    padding-top: 2em;
+}
+
+.user-info-name-position-container {
+    float: left;
+    margin-top: 1.8em
+}
+
+.user-info-name {
+    font-size: 1.0em
+}
+
+.user-info-position {
+    font-size: 1.0em;
+    color: #14791E;
+    float: right
+}
+
+.user-image-container {
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    background-color: #FFCB00;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #FFCB00;
+    left: 1em
+}
+
+.breadcrumb-container {
+    padding-left: 7.2em;
+    padding-top: 2em;
+    padding-right: 2em;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+.breadcrumb-text {
+    float: left;
+    font-family: 'Segoe UI Light';
+    color: #BA377D;
+    font-size: 1.7em
 }

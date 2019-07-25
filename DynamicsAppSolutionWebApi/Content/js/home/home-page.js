@@ -11,6 +11,11 @@ $(function () {
     browserResize();
 
     rightMenuHoverAnimations();
+
+    hideUserContainer();
+
+    // temporary
+    $(".footer").hide();
 })
 
 // right menu items height balance
@@ -75,4 +80,9 @@ function rightMenuHoverAnimations() {
             $(".right-menu-item.logout").stop(true, false).animate({ "opacity": "0.59" });
             $(".left-menu-item.logout").stop(true, false).animate({ "opacity": "0.49" })
         });
+}
+
+// hide layout user container
+function hideUserContainer() {
+    $(".user-container").hide();
 }

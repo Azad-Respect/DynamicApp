@@ -24,14 +24,14 @@
         width: 200px;
     }
 
-.user-info-container {
+.home-user-info-container {
     position: absolute;
     left: 12%;
     top: 10%;
     transform: translate3d(-50%,-50%,0);
 }
 
-.user-info-name-position-container {
+.home-user-info-name-position-container {
     float: left;
     margin-top: 2.2em
 }
@@ -40,13 +40,13 @@
     font-size: 1.3em
 }
 
-.user-info-position {
+.home-user-info-position {
     font-size: 1.3em;
     color: #14791E;
     float: right
 }
 
-.user-image-container {
+.home-user-image-container {
     border-radius: 50%;
     width: 115px;
     height: 115px;

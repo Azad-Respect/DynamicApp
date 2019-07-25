@@ -24,7 +24,8 @@ namespace DynamicsAppSolutionWebApi
                     ));
             bundles.Add(new ScriptBundle("~/bundles/js/layout").Include(
                   "~/Scripts/jquery-{version}.js",
-                  "~/Content/js/layout/left-menu.js"
+                  "~/Content/js/layout/left-menu.js",
+                  "~/Content/js/layout/layout.js"
                   ));
             #endregion
 
@@ -37,6 +38,13 @@ namespace DynamicsAppSolutionWebApi
                    "~/Scripts/jquery-{version}.js",
                    "~/Content/js/home/home-page.js"
                    ));
+            #endregion
+
+            #region worklist
+            bundles.Add(new ScriptBundle("~/bundles/js/worklist").Include(
+                   "~/Scripts/jquery-{version}.js",
+                  "~/Content/js/worklist/worklist.js"
+                  ));
             #endregion
         }
     }
